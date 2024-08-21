@@ -1,7 +1,7 @@
 import { useContext, createContext, useReducer } from "react";
 
 const initialState = { notes: [{ message: null, id: null }] };
-function reduceer(state, action) {
+function reducer(state, action) {
   switch (action.type) {
     case "notes/created":
       return {
@@ -11,13 +11,20 @@ function reduceer(state, action) {
           { message: action.payload, id: state.notes.length },
         ],
       };
+
+    case "notes/deleted":
+      return {
+        ...state,
+        notes: state.notes.filter((note) => note.id !== action.payload),
+      };
+
     default:
       throw new Error("invalid state");
   }
 }
 const NotesContext = createContext(null);
 function NotesContextProvider({ children }) {
-  const [{ notes }, dispatch] = useReducer(reduceer, initialState);
+  const [{ notes }, dispatch] = useReducer(reducer, initialState);
   return (
     <NotesContext.Provider value={{ notes, dispatch }}>
       {children}

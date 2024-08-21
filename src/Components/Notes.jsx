@@ -14,7 +14,7 @@ function Notes() {
     <div className={styles.notes}>
       {notes.map((note) => (
         <li key={note.id}>
-          <NotesRendering note={note.message} />
+          <NotesRendering note={note} />
         </li>
       ))}
     </div>
