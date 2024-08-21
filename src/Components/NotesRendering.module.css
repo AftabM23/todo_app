@@ -1,5 +1,7 @@
 .notesItem {
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
 }
 li {
   text-decoration: underline;
