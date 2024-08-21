@@ -14,7 +14,13 @@ function NotesRendering({ note }) {
   return (
     <div className={styles.notesItem}>
       <input type="checkbox" onChange={(e) => handleCheckBox(e)} />
-      <p className={completed ? styles.taskCompleted : ""}>{note.message}</p>
+      <div>
+        <h1 className={completed ? styles.taskCompleted : ""}>
+          {note.note.title}
+        </h1>
+        <p>{note.note.body}</p>
+      </div>
+
       {note && (
         <Button
           onClick={() => dispatch({ type: "notes/deleted", payload: note.id })}

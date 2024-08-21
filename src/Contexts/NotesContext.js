@@ -8,7 +8,10 @@ function reducer(state, action) {
         ...state,
         notes: [
           ...state.notes,
-          { message: action.payload, id: state.notes.length },
+          {
+            note: { title: action.payload.title, body: action.payload.body },
+            id: state.notes.length,
+          },
         ],
       };
 
