@@ -1,6 +1,6 @@
 import { useContext, createContext, useReducer } from "react";
 
-const initialState = { notes: [{ message: null, id: null }] };
+const initialState = { notes: [] };
 function reducer(state, action) {
   switch (action.type) {
     case "notes/created":
@@ -23,6 +23,7 @@ function reducer(state, action) {
   }
 }
 const NotesContext = createContext(null);
+
 function NotesContextProvider({ children }) {
   const [{ notes }, dispatch] = useReducer(reducer, initialState);
   return (

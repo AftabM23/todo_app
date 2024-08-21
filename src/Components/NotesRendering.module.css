@@ -2,8 +2,18 @@
   cursor: pointer;
   display: flex;
   flex-direction: row;
+  background-color: aqua;
+  margin: 3px;
+  align-items: center;
+  padding: 3px;
+  border-bottom: 1px solid rgb(112, 112, 112);
+  font-size: smaller;
+  justify-content: space-between;
 }
 li {
-  text-decoration: underline;
   list-style-type: none;
+}
+
+.taskCompleted {
+  text-decoration: line-through;
 }
