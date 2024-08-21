@@ -1,13 +1,13 @@
 import { useNotes } from "../Contexts/NotesContext";
 import NotesRendering from "./NotesRendering";
-
+import styles from "./Notes.module.css";
 function Notes() {
   const { notes, id } = useNotes();
   return (
-    <div>
+    <div className={styles.notes}>
       {notes.map((note) => (
-        <li>
-          <NotesRendering note={note} key={id} />
+        <li key={id}>
+          <NotesRendering note={note} />
         </li>
       ))}
     </div>

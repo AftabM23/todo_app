@@ -1,3 +1,4 @@
 .inputSection {
   display: flex;
+  flex-direction: column;
 }

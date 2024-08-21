@@ -1,6 +1,7 @@
+import styles from "./NotesRendering.module.css";
 function NotesRendering({ note }) {
   return (
-    <div>
+    <div className={styles.notesItem}>
       <p>{note}</p>
     </div>
   );

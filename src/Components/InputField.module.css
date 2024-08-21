@@ -1,0 +1,4 @@
+.inputFields {
+  display: flex;
+  flex-direction: row;
+}

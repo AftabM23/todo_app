@@ -1,13 +1,14 @@
 import Button from "./Button";
 import { useNotes } from "../Contexts/NotesContext";
 import { useState } from "react";
+import styles from "./InputField.module.css";
 
 function InputField() {
   const [newNotes, setNewNotes] = useState("");
   const { dispatch } = useNotes();
 
   return (
-    <div>
+    <div className={styles.inputFields}>
       <input
         type="text"
         placeholder="Enter Task to add..."

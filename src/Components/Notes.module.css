@@ -1,0 +1,7 @@
+.notes {
+  border: 3px solid red;
+  width: 20rem;
+  height: 20rem;
+  overflow: auto;
+  scrollbar-width: none;
+}

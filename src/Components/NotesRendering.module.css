@@ -1,0 +1,7 @@
+.notesItem {
+  cursor: pointer;
+}
+li {
+  text-decoration: underline;
+  list-style-type: none;
+}
