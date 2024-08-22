@@ -5,11 +5,16 @@ import styles from "./NotesRendering.module.css";
 function NotesRendering({ note }) {
   const { dispatch } = useNotes();
   const [completed, setCompleted] = useState(false);
+  const [showBody, setShowBody] = useState(false);
 
   const handleCheckBox = (e) => {
     if (e.target.checked) {
       setCompleted(true);
     } else setCompleted(false);
+  };
+
+  const handleShowBody = () => {
+    setShowBody(!showBody);
   };
   return (
     <div className={styles.notesItem}>
@@ -18,7 +23,12 @@ function NotesRendering({ note }) {
         <h1 className={completed ? styles.taskCompleted : ""}>
           {note.note.title}
         </h1>
-        <p>{note.note.body}</p>
+        {showBody ? (
+          <p>{note.note.body}</p>
+        ) : (
+          <p>{note.note.body.slice(0, 5) + "..."}</p>
+        )}
+        <Button onClick={handleShowBody}>{!showBody ? "↓" : "↑"}</Button>
       </div>
 
       {note && (

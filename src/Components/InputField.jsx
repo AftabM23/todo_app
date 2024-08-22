@@ -28,7 +28,7 @@ function InputField() {
         onChange={(e) => setNewNotesBody(e.target.value)}
         value={newNotesBody}
         rows={3} // You can adjust the number of rows to fit your needs
-        cols={15} // Adjust the width of the textarea
+        cols={5} // Adjust the width of the textarea
       ></textarea>
       <Button onClick={handleClick}>Add note</Button>
     </div>
