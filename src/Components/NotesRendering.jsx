@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useNotes } from "../Contexts/NotesContext";
 import Button from "./Button";
