@@ -17,3 +17,14 @@ li {
 .taskCompleted {
   text-decoration: line-through;
 }
+.Critical {
+  background-color: red;
+}
+
+.Medium {
+  background-color: yellow;
+}
+
+.Low {
+  background-color: green;
+}

@@ -10,7 +10,11 @@ function reducer(state, action) {
         notes: [
           ...state.notes,
           {
-            note: { title: action.payload.title, body: action.payload.body },
+            note: {
+              title: action.payload.title,
+              body: action.payload.body,
+              severity: action.payload.severity,
+            },
             id: state.notes.length,
           },
         ],

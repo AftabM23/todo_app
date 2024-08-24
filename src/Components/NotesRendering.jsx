@@ -17,8 +17,9 @@ function NotesRendering({ note }) {
   const handleShowBody = () => {
     setShowBody(!showBody);
   };
+  console.log(note.note);
   return (
-    <div className={styles.notesItem}>
+    <div className={`${styles.notesItem} ${styles[note.note.severity]}`}>
       <input type="checkbox" onChange={(e) => handleCheckBox(e)} />
       <div>
         <h1 className={completed ? styles.taskCompleted : ""}>

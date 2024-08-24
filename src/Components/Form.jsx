@@ -6,13 +6,14 @@ import { useNotes } from "../Contexts/NotesContext";
 function Form({ setShowForm }) {
   const [newNotesTitle, setNewNotesTitle] = useState("");
   const [newNotesBody, setNewNotesBody] = useState("");
+  const [severity, setSeverity] = useState("");
   const { dispatch } = useNotes();
 
   const handleClick = (e) => {
     e.preventDefault();
     dispatch({
       type: "notes/created",
-      payload: { title: newNotesTitle, body: newNotesBody },
+      payload: { title: newNotesTitle, body: newNotesBody, severity: severity },
     });
     setNewNotesTitle("");
     setNewNotesBody("");
@@ -31,8 +32,8 @@ function Form({ setShowForm }) {
             />
           </span>
 
-          <select>
-            <option>Critical</option>
+          <select onChange={(e) => setSeverity(e.target.value)}>
+            <option>Default</option> <option>Critical</option>
             <option>Medium</option>
             <option>Low</option>
           </select>
