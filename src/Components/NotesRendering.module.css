@@ -9,6 +9,13 @@
   border-bottom: 1px solid rgb(112, 112, 112);
   font-size: smaller;
   justify-content: space-between;
+  height: 3rem;
+}
+.notesItem h1,
+p,
+button {
+  font-size: xx-small;
+  margin: 0;
 }
 li {
   list-style-type: none;

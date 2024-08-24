@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
-function Button({ children, onClick }) {
+import styles from "./Button.module.css";
+function Button({ children, onClick, type }) {
   return (
     <div>
-      <button onClick={onClick}>{children}</button>
+      <button className={styles[type]} onClick={onClick}>
+        {children}
+      </button>
     </div>
   );
 }

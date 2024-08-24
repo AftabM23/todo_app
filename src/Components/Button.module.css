@@ -1,0 +1,15 @@
+.addNewTask {
+  background-color: bisque;
+  border: none;
+  justify-content: center;
+  position: relative;
+  top: 10px;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.addNewTask span {
+  font-size: 20px;
+}

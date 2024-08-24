@@ -12,7 +12,9 @@ function InputSection() {
   return (
     <div className={`${styles.inputSection} ${showForm && styles.overLay}`}>
       <InputField />
-      <Button onClick={handleOpenForm}> Open form</Button>
+      <Button type="addNewTask" onClick={handleOpenForm}>
+        <span>&#43;</span> Add new Task
+      </Button>
       {showForm && <Form setShowForm={setShowForm} />}
       <Notes />
     </div>
