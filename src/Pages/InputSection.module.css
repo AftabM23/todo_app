@@ -3,7 +3,7 @@
   flex-direction: column;
   position: relative;
   top: 10%;
-
+  height: 100dvh;
   align-items: center;
 }
 

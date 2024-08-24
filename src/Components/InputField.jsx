@@ -30,7 +30,7 @@ function InputField() {
         rows={3} // You can adjust the number of rows to fit your needs
         cols={5} // Adjust the width of the textarea
       ></textarea>
-      <Button onClick={handleClick}>Add note</Button>
+      <Button onClick={(e) => handleClick(e)}>Add note</Button>
     </div>
   );
 }
