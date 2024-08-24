@@ -23,10 +23,9 @@ function Form({ setShowForm }) {
       <form>
         <span className={styles.titleSection}>
           <span className={styles.ttl}>
-            <label>Title</label>
             <input
               type="text"
-              placeholder="Enter title..."
+              placeholder="Title..."
               onChange={(e) => setNewNotesTitle(e.target.value)}
               value={newNotesTitle}
             />
