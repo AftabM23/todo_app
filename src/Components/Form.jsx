@@ -11,13 +11,25 @@ function Form({ setShowForm }) {
 
   const handleClick = (e) => {
     e.preventDefault();
-    dispatch({
-      type: "notes/created",
-      payload: { title: newNotesTitle, body: newNotesBody, severity: severity },
-    });
-    setNewNotesTitle("");
+    if (newNotesTitle.length > 0 && newNotesBody.length > 0) {
+      dispatch({
+        type: "notes/created",
+        payload: {
+          title: newNotesTitle,
+          body: newNotesBody,
+          severity: severity,
+        },
+      });
+      setNewNotesTitle("");
+      setNewNotesBody("");
+      setShowForm(false);
+    } else alert("please enter a valid Title");
+  };
+
+  const handleReset = (e) => {
+    e.preventDefault();
     setNewNotesBody("");
-    setShowForm(false);
+    setNewNotesTitle("");
   };
   return (
     <div className={styles.form}>
@@ -54,7 +66,7 @@ function Form({ setShowForm }) {
 
         <span className={styles.btnSection}>
           <Button onClick={handleClick}>Add note</Button>
-          <Button>Reset</Button>
+          <Button onClick={handleReset}>Reset</Button>
         </span>
       </form>
     </div>

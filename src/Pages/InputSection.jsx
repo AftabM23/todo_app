@@ -1,4 +1,4 @@
-import InputField from "../Components/InputField";
+// import InputField from "../Components/InputField";
 import styles from "./InputSection.module.css";
 import Notes from "../Components/Notes";
 import Button from "../Components/Button";
@@ -11,7 +11,7 @@ function InputSection() {
   };
   return (
     <div className={`${styles.inputSection} ${showForm && styles.overLay}`}>
-      <InputField />
+      {/* <InputField /> */}
       <Button type="addNewTask" onClick={handleOpenForm}>
         <span>&#43;</span> Add new Task
       </Button>
