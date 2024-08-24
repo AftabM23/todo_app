@@ -13,3 +13,17 @@
 .addNewTask span {
   font-size: 20px;
 }
+.login {
+  background-color: #107ad1;
+  color: white;
+  height: 1rem;
+  text-align: center;
+  font-size: 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.login:hover {
+  background-color: rgb(3, 114, 114);
+}

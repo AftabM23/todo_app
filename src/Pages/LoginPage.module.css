@@ -1,0 +1,11 @@
+.loginPage {
+  background-color: pink;
+  height: 100dvh;
+  background-image: url("../assets/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-attachment: fixed; /* Keep the background fixed */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+}

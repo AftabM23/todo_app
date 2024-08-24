@@ -1,13 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { NotesContextProvider } from "./Contexts/NotesContext";
+
 import InputSection from "./Pages/InputSection";
+import LoginPage from "./Pages/LoginPage";
 
 function App() {
   return (
     <div className="App">
-      <NotesContextProvider>
-        <InputSection />
-      </NotesContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginPage />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/notes" element={<InputSection />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
