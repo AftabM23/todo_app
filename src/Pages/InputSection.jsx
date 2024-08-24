@@ -10,7 +10,7 @@ function InputSection() {
     setShowForm((show) => !show);
   };
   return (
-    <div className={styles.inputSection}>
+    <div className={`${styles.inputSection} ${showForm && styles.overLay}`}>
       <InputField />
       <Button onClick={handleOpenForm}> Open form</Button>
       {showForm && <Form />}
